@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chhota sa gift aapki sukoo ke taraf se 💕 </title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="music/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+  <!-- FALLING HEARTS -->
+  <div class="hearts"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Happy Birthday Bhakwa🤍</h1>
+    <p>Every moment with you feels magical</p>
+    <div id="countdown"></div>
+  </section>
+
+  <!-- MESSAGES -->
+  <section class="messages">
+    <h2>For You 💌</h2>
+    <div class="cards">
+      <div class="card">You feel like home 🤍</div>
+      <div class="card">I choose you, always ✨</div>
+      <div class="card">My safe place is you 🌙</div>
+    </div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="gallery">
+    <h2>Our Memories 📸</h2>
+    <div class="photos">
+      <img src="images/pic1.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic2.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic3.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic4.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic5.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic6.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic7.jpeg" onclick="openModal(this.src)">
+      <img src="images/pic8.jpeg" onclick="openModal(this.src)">
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" onclick="closeModal()">
+    <img id="modalImg">
+  </div>
+
+  <!-- LETTER -->
+  <section class="letter">
+    <h2>A Letter For You 💖</h2>
+    <button onclick="openLetter()">Open</button>
+    <div id="letterText">
+      <p>
+        Happy Birthday my love 🤍  
+        Congratulations on surviving another year of my mood swings 😌
+You deserve an award… or at least a cake (which I’ll help you finish).
+You’re cute, you’re weird, you’re annoying — and somehow you’re perfect for me.
+Thank you for making my life brighter, louder, and full of laughter.
+May this year bring you success, happiness, and unlimited patience… because you’re still stuck with me 😜
+Ab thoda toh km aalsi baniye tbhi toh aapka naam phone me kuchh pyara se save krungi!
+May you become little less aalsi this year!
+
+Happy Birthday, my favorite human 💖
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
