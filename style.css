@@ -23,6 +23,7 @@ section {
   font-weight: 700;
   letter-spacing: 4px;
   background: linear-gradient(90deg, #ff758f, #ffb347, #ffdde1);
+ background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 2s ease-in-out infinite alternate;
