@@ -18,53 +18,56 @@ section {
 
 #countdown {
   margin-top: 25px;
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  background: linear-gradient(90deg, #ff758f, #ffb347, #ffdde1);
- background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glow 2s ease-in-out infinite alternate;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 }
-#countdown span {
-  display: inline-block;
-  box-shadow: 0 8px 20px rgba(255, 150, 180, 0.25);
-  margin: 0 10px;
-  padding: 15px 18px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(6px);
+
+/* BOX STYLE (RED GLOW EFFECT) */
+.time-box {
+  padding: 16px 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(255, 120, 150, 0.35);
   min-width: 90px;
+}
+
+/* CLEAR TEXT (NO BLUR) */
+.time {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ff4d6d;   /* solid sharp color */
+  text-shadow: none;
 }
 
 #countdown small {
   display: block;
+  margin-top: 6px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   letter-spacing: 1px;
   color: #555;
-  margin-top: 5px;
 }
+#countdown span {
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(255, 120, 150, 0.35);
+  margin: 0 10px;
+  padding: 15px 18px;
+  border-radius: 18px;
+  background: #fff;
+  min-width: 90px;
+}
+
 @media (max-width: 768px) {
-  #countdown {
-    font-size: 2rem;
+  .time {
+    font-size: 1.8rem;
   }
-  #countdown span {
+  .time-box {
     min-width: 65px;
-    padding: 10px;
+    padding: 12px;
   }
-}
-
-
-.photo-card {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #777;
-}
-.photo-card p {
-  margin-top: 8px;
 }
 
 /* MUSIC BUTTON */
@@ -111,8 +114,8 @@ section {
   height: 220px;
   object-fit: cover;
   border-radius: 20px;
-  padding: 10px;
-  background: white;
+  padding: 0;
+  background: transparent;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   transform: rotate(calc(-3deg + 6deg * var(--r)));
 }
@@ -148,13 +151,24 @@ section {
 
 #letterText {
   display: none;
-  background: #fff;
-  padding: 25px;
-  margin: 25px auto;
+  position: relative;
+  margin: 40px auto;
+  padding: 40px 35px;
   width: 85%;
-  max-width: 420px;
-  border-radius: 20px;
-  line-height: 1.6;
+  max-width: 520px;
+
+  /* pinterest paper look */
+  background: linear-gradient(180deg, #fffaf7, #fff1f4);
+  border-radius: 28px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+
+  box-shadow:
+    0 25px 50px rgba(255, 160, 180, 0.25),
+    inset 0 0 0 1px rgba(255, 200, 210, 0.6);
 }
 
 @media (max-width: 768px) {

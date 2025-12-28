@@ -11,10 +11,10 @@ setInterval(() => {
   const s = Math.floor((diff / 1000) % 60);
 
  document.getElementById("countdown").innerHTML = `
-  <span>${d}<small>Days</small></span>
-  <span>${h}<small>Hrs</small></span>
-  <span>${m}<small>Min</small></span>
-  <span>${s}<small>Sec</small></span>
+  <span class="time-box"><span class="time">${d}</span><small>Days</small></span>
+  <span class="time-box"><span class="time">${h}</span><small>Hrs</small></span>
+  <span class="time-box"><span class="time">${m}</span><small>Min</small></span>
+  <span class="time-box"><span class="time">${s}</span><small>Sec</small></span>
 `;
 }, 1000);
 
